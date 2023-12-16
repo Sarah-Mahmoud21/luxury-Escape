@@ -1,0 +1,445 @@
+body {
+    /* font-family: 'Proxima Nova Rg'; */
+    color: #334757;
+    background: url(../images/body-bg.png) repeat;
+    font-size: 16px;
+    line-height: 32px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 320px;
+}
+
+.container {
+    margin: auto;
+    margin-top: 65px;
+    width: 90%;
+    background: url(../images/container-bg.jpg) repeat-y center top;
+}
+
+.phototour-hero {
+    height: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.phototour-hero .image {
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.phototour-hero .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.phototour-hero .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    padding-top: 210px;
+    text-align: center;
+}
+
+.phototour-hero .content h1 {
+    color: #fff;
+    font-family: "rukolaregular";
+    font-size: 136px;
+    line-height: 136px;
+    margin: 0 0 24px;
+    font-weight: 500;
+}
+
+.phototour-hero .content h3 {
+    color: #f7f1f0;
+    font-family: "Festivo Letters No1";
+    font-size: 30px;
+    margin: 0 0 34px;
+    text-transform: uppercase;
+}
+
+.phototour-hero .content .date {
+    display: inline-block;
+    height: 48px;
+    line-height: 48px;
+    border: 2px solid #fff;
+    padding: 0 22px;
+    color: #fff;
+    font-size: 25px;
+    font-family: "Festivo Letters No1";
+}
+
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+.phototour-intro {
+    margin-top: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.phototour-intro .section-title {
+    background-image: url(../images/italy/section-title-brush-1.png);
+}
+
+.section-title {
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
+.section-title h5 {
+    font-size: 18px;
+    color: #1d364a;
+    font-family: 'Festivo Letters No1';
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2.5px;
+    margin: 0 0 56px 0;
+}
+
+.section-title h2 {
+    color: #1d364a;
+    font-size: 56px;
+    line-height: 56px;
+    margin: 0;
+    font-family: 'rukolaregular';
+    text-align: center;
+    margin: 0 0 56px 0;
+}
+
+.phototour-intro .meta-details {
+    text-align: center;
+    margin-bottom: 62px;
+}
+
+.meta-details ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.phototour-intro .meta-details li {
+    margin-left: 40px;
+    margin-right: 40px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.meta-details .title {
+    color: #eb7e0e;
+    font-family: 'Festivo Letters No1';
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.meta-details .detail {
+    color: #1d364a;
+    font-family: 'Festivo Letters No1';
+    font-size: 25px;
+}
+
+.phototour-intro .intro-itinerary-icons {
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.phototour-intro .intro-itinerary-icons img {
+    max-height: 102px;
+    max-width: 102px;
+    display: inline-block;
+    margin: 0 56px;
+}
+
+.phototour-itinerary .interactive {
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 1004px;
+    position: relative;
+}
+
+.phototour-itinerary .interactive .image-slideshow.slick-initialized {
+    display: block;
+}
+
+.phototour-itinerary .interactive .image-slideshow {
+    width: 900px;
+    margin-left: 124px;
+    float: left;
+    box-shadow: 10px 80px 121px -13px rgb(0 0 0 / 32%);
+}
+
+.slick-slider {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.content-slideshow.slick-initialized.slick-slider {
+    left: 450px;
+    top: 250px;
+}
+
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.phototour-itinerary .interactive .image-slideshow .modal-image {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    cursor: zoom-in;
+}
+
+.phototour-itinerary .interactive .image-slideshow .slick-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 14px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.phototour-itinerary .interactive .image-slideshow .slick-dots li.slick-active button,
+ .phototour-itinerary .interactive .image-slideshow .slick-dots li:hover button {
+    background: #fff;
+}
+
+.phototour-itinerary .interactive .image-slideshow .slick-dots li {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 6px;
+}
+
+.phototour-itinerary .interactive .image-slideshow .slick-dots li button {
+    background: none;
+    padding: 0;
+    border: none;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.phototour-itinerary .interactive .content-slideshow {
+    width: 660px;
+    position: absolute;
+    z-index: 10;
+    /* top: 56px;
+    right: 20%; */
+}
+
+.phototour-itinerary .interactive .content-slideshow .slide-content {
+    padding: 30px 40px;
+    position: relative;
+    margin: 70px;
+    background: #fff;
+    box-shadow: 10px 20px 40px -13px rgb(0 0 0 / 32%);
+    opacity: 0;
+    display: none;
+    transition: all 150ms ease;
+}
+
+.phototour-itinerary .interactive .content-slideshow .slide-content p {
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+.phototour-itinerary .interactive .content-slideshow .slide-content .icon {
+    width: 138px;
+    height: 138px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -69px;
+    margin-right: -69px;
+    line-height: 138px;
+}
+
+.inline-controls-mobile , .mobile-image { 
+    opacity: 0;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.phototour-itinerary .interactive .content-slideshow .slide-content.slick-active {
+    opacity: 1;
+    display: block;
+}
+
+#tempdiv  {
+    display: block;
+}
+
+.phototour-itinerary .interactive .content-slideshow .inline-controls {
+    margin-top: 32px;
+}
+
+.phototour-itinerary .interactive .content-slideshow .inline-controls .arrow {
+    height: 28px;
+    line-height: 28px;
+    color: #1d364a;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Festivo Letters No1';
+    cursor: pointer;
+}
+
+.phototour-itinerary .interactive .content-slideshow .inline-controls .arrow.arrow-prev {
+    background: url(../images/icon-hand-prev.svg) no-repeat center left;
+    background-size: 45px auto;
+    padding-left: 58px;
+    float: left;
+}
+
+.phototour-itinerary .interactive .content-slideshow .inline-controls .arrow.arrow-next {
+    background: url(../images/icon-hand-next.svg) no-repeat center right;
+    background-size: 45px auto;
+    padding-right: 58px;
+    float: right;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        /* margin: auto; */
+        margin-top: 65px;
+        width: 100%;
+        background: url(../images/container-bg.jpg) repeat-y center top;
+    }
+    
+    .phototour-hero {
+        height: 900px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .phototour-intro .intro-itinerary-icons img {
+        max-width: 80px;
+        max-height: 80px;
+        margin: 0 30px 30px 30px;
+    }
+    .slide-content.slick-slide.slick-cloned{
+        /* display: none; */
+    }
+    .content-slideshow.slick-initialized.slick-slider {
+        left: 200px;
+        top: 250px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .container {
+        /* margin: auto; */
+        margin-top: 65px;
+        width: 100%;
+        background: url(../images/container-bg.jpg) repeat-y center top;
+    }
+
+    .phototour-hero {
+        height: 900px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .main-slideshow .slide .slide-content, .phototour-hero .content {
+        padding: 92px 36px 0 36px;
+    }
+
+    .phototour-intro .intro-itinerary-icons img {
+        max-width: 64px;
+        max-height: 64px;
+        margin: 24px;
+    }
+    
+    .phototour-intro {
+        margin-top: 0;
+    }
+
+    .section-title h5 {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .phototour-itinerary .interactive .content-slideshow .slide-content .icon {
+        width: 0px;
+        height: 0px;
+    }
+
+    .phototour-itinerary .interactive .image-slideshow {
+        width: 900px;
+        margin-left: 124px;
+        float: left;
+        box-shadow: 10px 80px 121px -13px rgb(0 0 0 / 32%);
+    }
+
+    .phototour-itinerary .interactive .content-slideshow {
+        width: 660px;
+        position: absolute;
+        z-index: 10;
+        top: 56px;
+        right: 20%;
+    }
+    
+    .phototour-itinerary .interactive .content-slideshow .slide-content {
+        padding: 30px 40px;
+        position: relative;
+        margin: 70px;
+        background: #fff;
+        box-shadow: 10px 20px 40px -13px rgb(0 0 0 / 32%);
+        opacity: 0;
+        transition: all 150ms ease;
+    }
+    .inline-controls-mobile , .mobile-image { 
+        opacity: 1;
+    }
+}

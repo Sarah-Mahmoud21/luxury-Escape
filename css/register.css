@@ -1,0 +1,27 @@
+
+.regName{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+ }
+
+.regName .reg{
+        width:50%;
+        padding:1rem;
+        font-size: 1.7rem;
+        color: #333;
+        margin:.6rem 0;
+        border :.1rem solid rgba(0,0,0,.3);
+        text-transform: none;
+ }
+.regName .reg:focus{
+    border-color: var(--violet);
+}
+
+.login-form-container #form-close-Reg{
+    position: absolute;
+    top:2rem; right:3rem;
+    font-size:5rem;
+    color:#fff;
+    cursor:pointer;
+}

@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --violet :violet;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin :0; padding:0;
+    box-sizing:border-box;
+    text-transform: capitalize;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+ * ::selection{
+     background:var(--violet);
+     color:#fff;
+ }
+ html{
+     font-size: 62.5%;
+     overflow-x:hidden;
+     scroll-padding-top: 6rem;
+     scroll-behavior: smooth;
+ }
+
+ section{
+     padding: 2rem 9%;
+ }
+
+ .heading{
+     text-align: center;
+     padding: 2.5rem 0;
+ }
+
+ .heading span{
+     font-size: 3.5rem;
+     background: rgba(255, 165, 0, .2);
+     color:var(--violet);
+     border-radius: .5rem;
+     padding: 2rem 1rem;
+
+ }
+
+ .heading span.space{
+     background: none;
+ }
+ 
+ .btn{
+     display: inline-block;
+     margin-top: 1rem;
+     background: var(--violet);
+     color:#fff;
+     padding: .8rem 3rem;
+     border:.2rem solid var(--violet);
+     cursor:pointer;
+     font-size:1.7rem;
+ }
+
+ .btn:hover{
+     background:rgba(255, 165, 0, .2);
+     color:var(--violet);
+
+ }
+
+ header{
+    position: fixed;
+     top:0; left:0; right:0;
+     background:#333;
+     z-index: 1000;
+     display:flex;
+     align-items: center;
+     justify-content: space-between;
+     padding:2rem 9%;
+ }
+
+ header .logo{ 
+     font-size: 2.5rem;
+     font-weight: bolder;
+     color:#fff;
+     text-transform: uppercase;
+ }
+ header .logo span{
+     color:var(--violet);
+ }
+ 
+ header .navbar a:hover{
+     color:var(--violet);
+ }
+
+ header .navbar a{
+     color:#fff;
+     font-size: 2rem;
+     margin:0 .8rem;
+ }
+
+ 
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+input{
+    display: none;
+}
+.container{
+    padding-top: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+    text-align: center;
+}
+h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: var(--violet);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    0%{
+        width:100px;
+    }
+    50%{
+        width:200px;
+    }
+    100%{
+        width:100px
+    }  
+}
+.top-content{
+    background-color: #fff;
+    width:90%;
+    margin:0 auto 20px auto;
+    height:60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgray;
+}
+.container h3{
+    height:100%;
+    font-size:2rem;
+    background-color: #fff;
+    line-height: 60px;
+    padding: 0 50px;
+    color:var(--violet);
+}
+label{
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color:black;
+    cursor: pointer;
+    transition: .5s;
+}
+label:hover{
+    color: var(--violet);
+}
+.photo-gallery{
+    width: 90%;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+.pic{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px lightgray;
+}
+.pic img{
+    width: 100%;
+    height:100%;
+    border-radius: 10px;
+    transition: .5s;
+   object-fit: cover;
+}
+
+.pic::before{
+    content: "photo-gallery";
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+.pic::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom:0;
+    left:0;
+    border-radius: 10px;
+    height:0;
+    background-color: rgba(0,0,0,.4);
+    transition: .3s;
+}
+.pic:hover::after{
+    height: 100%;
+}
+.pic:hover::before{
+    margin-top: 0;
+    opacity:1;
+}
+#check1:checked ~ .container .photo-gallery .pic{
+    opacity: 1;
+    transform:scale(1);
+    position: relative;
+    transition: .5s;
+}
+#check2:checked ~ .container .photo-gallery .Rome{
+    opacity: 1;
+    transform:scale(1);
+    position: relative;
+    transition: .5s;
+}
+#check2:checked ~ .container .photo-gallery .NewYork,
+#check2:checked ~ .container .photo-gallery .Maldives,
+#check2:checked ~ .container .photo-gallery .London,
+#check2:checked ~ .container .photo-gallery .Istanbul,
+#check2:checked ~ .container .photo-gallery .Hawaii,
+#check2:checked ~ .container .photo-gallery .Egypt,
+#check2:checked ~ .container .photo-gallery .Dubai,
+#check2:checked ~ .container .photo-gallery .Bali{
+    opacity: 0;
+    transform:scale(0);
+    position: absolute;
+}
+#check3:checked ~ .container .photo-gallery .NewYork{
+    opacity: 1;
+    transform:scale(1);
+    position: relative;
+    transition: .5s;
+}
+#check3:checked ~ .container .photo-gallery .Rome,
+#check3:checked ~ .container .photo-gallery .Maldives,
+#check3:checked ~ .container .photo-gallery .London,
+#check3:checked ~ .container .photo-gallery .Istanbul,
+#check3:checked ~ .container .photo-gallery .Hawaii,
+#check3:checked ~ .container .photo-gallery .Egypt,
+#check3:checked ~ .container .photo-gallery .Dubai,
+#check3:checked ~ .container .photo-gallery .Bali{
+    opacity: 0;
+    transform:scale(0);
+    position: absolute;
+}
+
+#check4:checked ~ .container .photo-gallery .Maldives{
+    opacity: 1;
+    transform:scale(1);
+    position: relative;
+    transition: .5s;
+}
+#check4:checked ~ .container .photo-gallery .Rome,
+#check4:checked ~ .container .photo-gallery .NewYork,
+#check4:checked ~ .container .photo-gallery .London,
+#check4:checked ~ .container .photo-gallery .Istanbul,
+#check4:checked ~ .container .photo-gallery .Hawaii,
+#check4:checked ~ .container .photo-gallery .Egypt,
+#check4:checked ~ .container .photo-gallery .Dubai,
+#check4:checked ~ .container .photo-gallery .Bali{
+    opacity: 0;
+    transform:scale(0);
+    position: absolute;
+}
+#check5:checked ~ .container .photo-gallery .London{
+    opacity: 1;
+    transform:scale(1);
+    position: relative;
+    transition: .5s;
+}
+#check5:checked ~ .container .photo-gallery .Rome,
+#check5:checked ~ .container .photo-gallery .NewYork,
+#check5:checked ~ .container .photo-gallery .Maldives,
+#check5:checked ~ .container .photo-gallery .Istanbul,
+#check5:checked ~ .container .photo-gallery .Hawaii,
+#check5:checked ~ .container .photo-gallery .Egypt,
+#check5:checked ~ .container .photo-gallery .Dubai,
+#check5:checked ~ .container .photo-gallery .Bali{
+    opacity: 0;
+    transform:scale(0);
+    position: absolute;
+}
+#check6:checked ~ .container .photo-gallery .Istanbul{
+    opacity: 1;
+    transform:scale(1);
+    position: relative;
+    transition: .5s;
+}
+#check6:checked ~ .container .photo-gallery .Rome,
+#check6:checked ~ .container .photo-gallery .NewYork,
+#check6:checked ~ .container .photo-gallery .Maldives,
+#check6:checked ~ .container .photo-gallery .London,
+#check6:checked ~ .container .photo-gallery .Hawaii,
+#check6:checked ~ .container .photo-gallery .Egypt,
+#check6:checked ~ .container .photo-gallery .Dubai,
+#check6:checked ~ .container .photo-gallery .Bali{
+    opacity: 0;
+    transform:scale(0);
+    position: absolute;
+}
+#check7:checked ~ .container .photo-gallery .Hawaii{
+    opacity: 1;
+    transform:scale(1);
+    position: relative;
+    transition: .5s;
+}
+#check7:checked ~ .container .photo-gallery .Rome,
+#check7:checked ~ .container .photo-gallery .NewYork,
+#check7:checked ~ .container .photo-gallery .Maldives,
+#check7:checked ~ .container .photo-gallery .London,
+#check7:checked ~ .container .photo-gallery .Istanbul,
+#check7:checked ~ .container .photo-gallery .Egypt,
+#check7:checked ~ .container .photo-gallery .Dubai,
+#check7:checked ~ .container .photo-gallery .Bali{
+    opacity: 0;
+    transform:scale(0);
+    position: absolute;
+}
+#check8:checked ~ .container .photo-gallery .Egypt{
+    opacity: 1;
+    transform:scale(1);
+    position: relative;
+    transition: .5s;
+}
+#check8:checked ~ .container .photo-gallery .Rome,
+#check8:checked ~ .container .photo-gallery .NewYork,
+#check8:checked ~ .container .photo-gallery .Maldives,
+#check8:checked ~ .container .photo-gallery .London,
+#check8:checked ~ .container .photo-gallery .Hawaii,
+#check8:checked ~ .container .photo-gallery .Istanbul,
+#check8:checked ~ .container .photo-gallery .Dubai,
+#check8:checked ~ .container .photo-gallery .Bali{
+    opacity: 0;
+    transform:scale(0);
+    position: absolute;
+}
+#check9:checked ~ .container .photo-gallery .Dubai{
+    opacity: 1;
+    transform:scale(1);
+    position: relative;
+    transition: .5s;
+}
+#check9:checked ~ .container .photo-gallery .Rome,
+#check9:checked ~ .container .photo-gallery .NewYork,
+#check9:checked ~ .container .photo-gallery .Maldives,
+#check9:checked ~ .container .photo-gallery .London,
+#check9:checked ~ .container .photo-gallery .Hawaii,
+#check9:checked ~ .container .photo-gallery .Istanbul,
+#check9:checked ~ .container .photo-gallery .Egypt,
+#check9:checked ~ .container .photo-gallery .Bali{
+    opacity: 0;
+    transform:scale(0);
+    position: absolute;
+}
+#check10:checked ~ .container .photo-gallery .Bali{
+    opacity: 1;
+    transform:scale(1);
+    position: relative;
+    transition: .5s;
+}
+#check10:checked ~ .container .photo-gallery .Rome,
+#check10:checked ~ .container .photo-gallery .NewYork,
+#check10:checked ~ .container .photo-gallery .Maldives,
+#check10:checked ~ .container .photo-gallery .London,
+#check10:checked ~ .container .photo-gallery .Hawaii,
+#check10:checked ~ .container .photo-gallery .Istanbul,
+#check10:checked ~ .container .photo-gallery .Egypt,
+#check10:checked ~ .container .photo-gallery .Dubai{
+    opacity: 0;
+    transform:scale(0);
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+.footer{
+    padding: 1rem;
+    margin-top: 2rem;
+    background: #333;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    padding: 1rem 0;
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding:.7rem 0;
+    color:#fff;
+}
+
+.footer .box-container .box p{
+    font-size: 1.25rem;
+    padding:.7rem 0;
+    color:#eee;
+    text-transform: lowercase;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    padding:.7rem 0;
+    color:#eee;
+}
+
+.footer .box-container .box a:hover{
+    color:var(--violet);
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

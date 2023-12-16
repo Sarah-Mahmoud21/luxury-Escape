@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveling Agency</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    >
+    <link rel ="stylesheet" href ="../css/style.css" >
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+ <!-- header sction statrs -->   
+
+ <header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+      
+    <a href="../index.php" class= "logo"> <span>L</span>uxury <span>E</span>scape</a>
+        <nav class="navbar">
+            <a href ="../index.php#home"> home</a>
+            <a href ="../index.php#book"> book</a>
+            <a href ="../index.php#packages"> packages</a>
+            <a href ="../index.php#services"> services</a>
+            <a href ="../index.php#gallery"> gallery</a>
+            <a href ="../index.php#review"> review</a>
+            <a href ="../index.php#contact"> contact</a>
+    </nav>
+
+    <div class ="icons">
+        <i class ="fas fa-search" id ="search-btn"></i>
+    </div>
+
+    <form action ="" class= "search-bar-container">
+        <input type ="search" id ="search-bar" placeholder="search here ..">
+        <label for ="search-bar" class ="fas fa-search"></label>
+    </form>
+ </header>
+
+<!--register form starting -->
+<div class ="login-form-container active">
+
+    <i class="fas fa-times" id="form-close-Reg"></i>
+
+    <form action="../php/register.php" method="post">
+        <h3>Register Account</h3>
+        <div class="regName">
+            <input type ="text" placeholder="First Name" class="reg"  name="regFName" id="regFName" required>
+            <input type ="text" placeholder="Last Name" class="reg"  name="regLName" id="regLName" required>
+        </div>
+        <input type ="email" placeholder="Enter your Email" class="box reg"  name="regEmail" id="regEmail" required>
+        <input type ="password" placeholder="Enter your Password" class= "box reg" name="regPass" id="regPass" required>
+        <input type ="password" placeholder="Confirm your Password" class= "box reg" name="regPassCon" id="regPass_Con" required>
+        <input type ="checkbox" id="showPass">
+        <label for="showPass"> Show Password</label>
+        <input type ="text" placeholder="Enter your Address" class= "box reg" name="regAddress" id="regAddress" required>
+        <input type ="date" class= "box reg" name="regAddress" id="regDate" name="regDate" required>
+        <input type ="submit" value= "register now" class="btn" disabled>
+        <p>Already have an account? <a href ="../index.html"> Login now</a></p>
+    </form>
+
+</div>
+
+<!-- register form ending -->
+
+    <script src="../js/register.js"></script>
+</body>
+</html>
